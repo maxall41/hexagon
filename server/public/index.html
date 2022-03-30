@@ -38,11 +38,24 @@
         <h1>Getting started:</h1>
         <p>
           Looks like you got the server working 🎉! Now you just need to install
-          the client todo so run the below command for an automated install. Or
-          compile it yourself.
+          the client todo so run the below command to get the binary then just
+          add it to your path!
         </p>
-        <div onclick="copyCode('example command --here')" class="code">
-          example command --here<i class="fa-solid fa-copy"></i>
+        <div
+          onclick="copyCode('wget https://github.com/maxall41/hexagon/releases/download/PUBLIC/client')"
+          class="code"
+        >
+          wget
+          https://github.com/maxall41/hexagon/releases/download/PUBLIC/client<i
+            class="fa-solid fa-copy"
+          ></i>
+        </div>
+        <p>
+          Or compile it yourself by running the below command in the source
+          directory of the client:
+        </p>
+        <div onclick="copyCode('go build .')" class="code">
+          go build .<i class="fa-solid fa-copy"></i>
         </div>
       </div>
     </div>
