@@ -1,5 +1,4 @@
 # Hexagon
-![Image of the client UI](https://i.ibb.co/80fXSN9/client.png)
 ## What is Hexagon?
 Hexagon is a terminal based Homelab dashboard so you can monitor all the apps you run locally and remember them 😉.
 ## Features
