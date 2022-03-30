@@ -1,5 +1,5 @@
 # Hexagon
-![This is an image](/README-CONTENT/client.png)
+<img src="/README-CONTENT/client.png" alt="Image of the client" width="200"/>
 ## What is Hexagon?
 Hexagon is a terminal based Homelab dashboard so you can monitor all the apps you run locally and remember them 😉.
 ## Features
