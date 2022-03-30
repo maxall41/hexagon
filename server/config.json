@@ -1,0 +1,26 @@
+{
+  "authentication": {
+    "enabled": false,
+    "sha256_password_hash": "AEC8084845B41A6952D46CBAA1C9B798659487FFD133796D95D05BA45D9096C2"
+  },
+  "apps": [
+    {
+      "name": "App 1",
+      "description": "This is an app (1)",
+      "url": "https://example.com/",
+      "checkStatus": true
+    },
+    {
+      "name": "App 2",
+      "description": "This is an app (2)",
+      "url": "https://example.com/",
+      "checkStatus": true
+    },
+    {
+      "name": "App 3",
+      "description": "This is an app (3)",
+      "url": "https://fdsfsdfsdfs.com/3",
+      "checkStatus": true
+    }
+  ]
+}

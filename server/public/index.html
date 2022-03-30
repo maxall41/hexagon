@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Hexagon</title>
+  </head>
+  <body>
+    <img width="150" height="150" class="title" src="./Title.png" />
+    <h1 id="flavor-text">
+      <span id="flavor-text-content">Failed to load flavor text </span
+      ><span id="flavor-text-status">FAILED</span
+      ><span class="blinking-cursor">█</span>
+    </h1>
+    <div class="w-100 h-100 flex justify-center items-center">
+      <div class="w-1/2 min-w-25">
+        <h1>Getting started:</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+          mollitia at quisquam ipsa eos distinctio possimus assumenda ut quidem
+          et.
+        </p>
+        <div onclick="copyCode('example command --here')" class="code">
+          example command --here<i class="fa-solid fa-copy"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      var successful = document.execCommand("copy");
+      var msg = successful ? "successful" : "unsuccessful";
+      console.log("Fallback: Copying text command was " + msg);
+    } catch (err) {
+      console.error("Fallback: Oops, unable to copy", err);
+    }
+
+    document.body.removeChild(textArea);
+  }
+  function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(text);
+      return;
+    }
+    navigator.clipboard.writeText(text).then(
+      function () {
+        console.log("Async: Copying to clipboard was successful!");
+      },
+      function (err) {
+        console.error("Async: Could not copy text: ", err);
+      }
+    );
+  }
+  function generateFlavorText() {
+    const flavorText = [
+      "Engaging warp drive ",
+      "Initializing Floppy disk ",
+      "Engaging quantum confinement beams ",
+      "Cubifying cubes ",
+      "Making sure 2 + 2 = 4 ",
+      "Generating anti-matter ",
+      "Generating dimensions for flux drive ",
+      "Splitting atoms ",
+      "Unsplitting atoms",
+      "Containing nuclear waste",
+      "Initializing Plasma Conduits",
+    ];
+    return flavorText[Math.floor(Math.random() * flavorText.length)];
+  }
+  function generateFlavorTextStatus() {
+    const statusCodes = [" COMPLETE", " FAILED"];
+    return statusCodes[Math.floor(Math.random() * statusCodes.length)];
+  }
+  function copyCode(code) {
+    anime({
+      targets: ".fa-copy",
+      scale: 1.2,
+      complete: function (anim) {
+        anime({
+          targets: ".fa-copy",
+          scale: 1,
+        });
+      },
+    });
+    copyTextToClipboard(code);
+  }
+  document.getElementById("flavor-text-content").innerText =
+    generateFlavorText();
+  const status = generateFlavorTextStatus();
+  if (status == " COMPLETE") {
+    document
+      .getElementById("flavor-text-status")
+      .classList.add("flavor-text-status-complete");
+  } else {
+    document
+      .getElementById("flavor-text-status")
+      .classList.add("flavor-text-status-failed");
+  }
+  document.getElementById("flavor-text-status").innerText = status;
+</script>
+<style>
+  @font-face {
+    font-family: main;
+    src: url(IBM.ttf);
+  }
+  @font-face {
+    font-family: fira;
+    src: url(FiraCode.ttf);
+  }
+  .w-100 {
+    width: 100vw;
+  }
+  .h-100 {
+    height: 100vh;
+  }
+  .min-w-25 {
+    min-width: 25rem;
+  }
+  body {
+    background-color: #0d0109;
+  }
+  h1 {
+    color: #008f11;
+    font-size: 32px;
+    text-align: center;
+  }
+  .title {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  #flavor-text {
+    position: absolute;
+    left: 20px;
+    top: 55px;
+    font-size: 14px;
+    font-family: fira;
+  }
+  .flavor-text-status-failed {
+    color: #ff5252;
+  }
+  .flavor-text-status-complete {
+    color: #008f11;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: #008f11;
+    text-align: center;
+    font-family: "main";
+  }
+  div {
+    font-family: "main";
+  }
+  .code {
+    background-color: #171617;
+    color: #008f11;
+    border-radius: 8px;
+    padding: 0.7rem;
+    margin-top: 1.25rem;
+    font-family: "fira";
+    display: flex;
+    justify-content: space-between;
+  }
+  .blinking-cursor {
+    font-weight: 100;
+    font-size: 14px;
+    color: #2e3d48;
+    animation: 1s blink step-end infinite;
+    font-family: "fira";
+    margin-left: 5px;
+  }
+
+  @keyframes blink {
+    from,
+    to {
+      color: transparent;
+    }
+    50% {
+      color: #008f11;
+    }
+  }
+</style>
