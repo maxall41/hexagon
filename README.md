@@ -12,6 +12,11 @@ Using a terminal application instead of a browser makes viewing your dashboard a
 //TODO
 ```
 ## Installing the client
+Just run the below command to download the binary and then add it to your path
 ```
-//TODO
+wget https://github.com/maxall41/hexagon/releases/download/PUBLIC/client
+```
+Or run this command in the source directory to build it yourself
+```
+go build .
 ```
