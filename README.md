@@ -12,7 +12,7 @@ To run the server natively just run the below command to compile the binary then
 ```
 go build .
 ```
-Docker container coming soon~
+Docker container coming soon!
 ## Installing the client
 Just run the below command to download the binary and then add it to your path
 ```
