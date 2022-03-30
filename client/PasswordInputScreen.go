@@ -23,7 +23,7 @@ func HandlePasswordInputScreen(m model,msg tea.KeyMsg) (tea.Model,tea.Cmd) {
 		m.setupPointer++;
 	}
 	if msg.String() == "enter" && m.setupPointer == 0 {
-		f, err := os.Create(".hexagon")
+		f, err := os.Create(os.Getenv("HOME") + "/.hexagon")
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -48,7 +48,7 @@ func HandlePasswordInputScreen(m model,msg tea.KeyMsg) (tea.Model,tea.Cmd) {
 		itemURLs := []string{
 		}
 	
-		if _, err := os.Stat(".hexagon"); err == nil {
+		if _, err := os.Stat(os.Getenv("HOME") + "/.hexagon"); err == nil {
 			config := load_config()
 	
 			if err != nil {

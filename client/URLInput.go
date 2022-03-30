@@ -29,7 +29,6 @@ func HandleURLInputScreen(m model,msg tea.KeyMsg) (tea.Model,tea.Cmd) {
 			if err != nil {
 				log.Fatalln(err)
 			}
-			fmt.Println(string(body))
 			if (string(body) == "This is a valid Hexagon server") {
 				resp, err := http.Get(m.urlInput.Value() + "/isAuthenticationRequired")
 				if err != nil {
@@ -45,7 +44,7 @@ func HandleURLInputScreen(m model,msg tea.KeyMsg) (tea.Model,tea.Cmd) {
 					m.passwordInput.Focus()
 					m.screen = PasswordInputScreen;
 				} else {
-					f, err := os.Create(".hexagon")
+					f, err := os.Create(os.Getenv("HOME") + "/.hexagon")
 					if err != nil {
 						log.Fatal(err)
 					}
@@ -67,8 +66,7 @@ func HandleURLInputScreen(m model,msg tea.KeyMsg) (tea.Model,tea.Cmd) {
 				
 					itemURLs := []string{
 					}
-				
-					if _, err := os.Stat(".hexagon"); err == nil {
+					if _, err := os.Stat(os.Getenv("HOME") + "/.hexagon"); err == nil {
 						config := load_config()
 				
 						if err != nil {

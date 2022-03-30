@@ -45,7 +45,7 @@ func (m model) Init() tea.Cmd {
 
 func load_config() Config {
     // Open our jsonFile
-    jsonFile, err := os.Open(".hexagon")
+    jsonFile, err := os.Open(os.Getenv("HOME") + "/.hexagon")
     // if we os.Open returns an error then handle it
     if err != nil {
         fmt.Println(err)
@@ -123,7 +123,7 @@ func main() {
 
 	m := model{list: list.New(items, list.NewDefaultDelegate(), 0, 0)}
 
-	if _, err := os.Stat(".hexagon"); err == nil {
+	if _, err := os.Stat(os.Getenv("HOME") + "/.hexagon"); err == nil {
 		config := load_config()
 
 		if err != nil {

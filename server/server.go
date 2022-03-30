@@ -102,7 +102,7 @@ func main() {
                 }
                 resp, err := client.Get(config.Apps[i].Url)
                 if err != nil {
-                    if (strings.Contains(err.Error(),"no such host")) {
+                    if (strings.Contains(err.Error(),"no such host") || strings.Contains(err.Error(),"context deadline exceeded")) {
                         config.Apps[i].ResolvedStatus = false
                     } else {
                         log.Fatal(err)
