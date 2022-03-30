@@ -8,9 +8,11 @@ Hexagon is a terminal based Homelab dashboard so you can monitor all the apps yo
 ## Why use a terminal?
 Using a terminal application instead of a browser makes viewing your dashboard a more streamlined experience.
 ## Installing the server
+To run the server natively just run the below command to compile the binary then just run it!
 ```
-//TODO
+go build .
 ```
+Docker container coming soon~
 ## Installing the client
 Just run the below command to download the binary and then add it to your path
 ```
@@ -20,3 +22,5 @@ Or run this command in the source directory to build it yourself
 ```
 go build .
 ```
+## Contributing
+If you want to contribute to this project feel free to!
