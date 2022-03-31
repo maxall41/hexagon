@@ -67,3 +67,5 @@ If you want to contribute to this project feel free to!
 - [ ] Alternate views
 - [ ] In-client configuration
 - [ ] Localization
+- [ ] Custom status code resolution with custom code
+- [ ] Custom acceptable status codes returned from URL endpoint
