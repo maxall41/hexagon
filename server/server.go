@@ -27,6 +27,7 @@ type App struct {
     Url string  `json:"url"`
     CheckStatus bool `string:"checkStatus"`
     ResolvedStatus bool `string:"resolvedStatus"`
+    AcceptableStatusCodes []int `string:"acceptableStatusCodes"`
 }
 
 type Authenticate struct {
@@ -69,6 +70,16 @@ func check_password(hash string) bool {
     correct := strings.EqualFold(strings.TrimRight(hash, "\n"),config.Authentication.Password)
     return correct
 }
+//TODO: THis is plane code. There is defiantly a better way todo this
+func intArrayContains(arr []int,element int) bool {
+    result := false
+    for _, arrElement := range arr {
+        if (element == arrElement) {
+            result = true
+        }
+    }
+    return result
+}
 
 func main() {
     app := fiber.New()
@@ -108,7 +119,7 @@ func main() {
                         log.Fatal(err)
                     }
                 } else {
-                    if resp.StatusCode == 200 {
+                    if intArrayContains(config.Apps[i].AcceptableStatusCodes,resp.StatusCode) || resp.StatusCode == 200 {
                         config.Apps[i].ResolvedStatus = true
                     } else {
                         config.Apps[i].ResolvedStatus = false

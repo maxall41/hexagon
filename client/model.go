@@ -7,6 +7,7 @@ import (
 
 type model struct {
 	list list.Model
+	listPointer int
 	urls []string
 	setupModeError string
 	screen int

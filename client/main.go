@@ -26,6 +26,8 @@ type App struct {
     Description   string `json:"description"`
     Url string  `json:"url"`
 	ResolvedStatus bool `string:"resolvedStatus"`
+	CheckStatus bool `string:"checkStatus"`
+	AcceptableStatusCodes []string `string:"acceptableStatusCodes"`
 }
 
 type Config struct {
@@ -153,6 +155,9 @@ func main() {
 				statusIcon = " ✅"
 			} else if app.ResolvedStatus == false {
 				statusIcon = " ❌"
+			}
+			if (app.CheckStatus == false) {
+				statusIcon = ""
 			}
 			items = append(items,item{ title: app.Name + statusIcon, desc: app.Description })
 			itemURLs = append(itemURLs, app.Url)

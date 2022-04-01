@@ -20,7 +20,7 @@
     {
       "name": "App 3",
       "description": "This is an app (3)",
-      "url": "https://fdsfsdfsdfs.com/3",
+      "url": "http://127.0.0.1:3000/404",
       "checkStatus": true
     }
   ]
