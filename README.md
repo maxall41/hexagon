@@ -1,6 +1,5 @@
 # Hexagon
 ![Logo](https://i.ibb.co/MMVFhfq/logo.png)
-[Release](https://img.shields.io/github/release-date/maxall41/hexagon)
 https://img.shields.io/github/release-date/maxall41/hexagon
 ## What is Hexagon?
 Hexagon is a terminal based Homelab dashboard so you can monitor all the apps you run locally and remember them 😉.
