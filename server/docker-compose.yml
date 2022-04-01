@@ -1,0 +1,11 @@
+version: "3.9" # optional since v1.27.0
+services:
+  server:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/code
+      - logvolume01:/var/log
+volumes:
+  logvolume01: {}
