@@ -64,13 +64,13 @@ go build .
 If you want to contribute to this project feel free to!
 ## Roadmap:
 - [x] Docker file
+- [x] Docker-Compose config
+- [x] Custom acceptable status codes returned from URL endpoint
+- [ ] Homebrew formula
 - [ ] Helm config
-- [ ] Docker-Compose config
 - [ ] Automated Install of both server & client
 - [ ] Keycloak authentication
 - [ ] Alternate views
 - [ ] In-client configuration
 - [ ] Localization
-- [ ] Custom status code resolution with custom code
-- [x] Custom acceptable status codes returned from URL endpoint
-- [ ] Homebrew formula
+- [ ] Custom status code resolvers
