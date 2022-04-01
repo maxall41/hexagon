@@ -36,7 +36,7 @@ The server loads a config when it starts which stores all of your apps and authe
       "description": "This is an app (3)",
       "url": "https://fdsfsdfsdfs.com/3",
       "checkStatus": true,
-      "_comment": "This is optional:",
+      "_comment": "This is optional defaults to 200 as accepted code:",
       "acceptableStatusCode": [200,201]
     }
   ]
@@ -71,3 +71,4 @@ If you want to contribute to this project feel free to!
 - [ ] Localization
 - [ ] Custom status code resolution with custom code
 - [x] Custom acceptable status codes returned from URL endpoint
+- [ ] Homebrew formula
