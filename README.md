@@ -9,6 +9,7 @@ Hexagon is a terminal based Homelab dashboard so you can monitor all the apps yo
 - 🔥 Blazing fast
 - ✅ Status indicators
 - 🔐 Secure authentication
+- 🎉 Terminal UI
 ## Why use a terminal?
 Using a terminal application instead of a browser makes viewing your dashboard a more streamlined experience. Because if you are like me you prefer using your terminal over your browser.
 ## Usage
