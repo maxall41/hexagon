@@ -45,12 +45,16 @@ The server loads a config when it starts which stores all of your apps and authe
   ]
 }
 ```
-## Installing the server
+## Installing the server (NATIVE)
 To run the server natively just run the below command to compile the binary then just run it!
 ```
 go build .
 ```
-Docker container coming soon!
+## Installing the server (Docker-Compose)
+To run the server inside Docker compose just download the repo and then run the below command inside of the server/ directory to use docker-compose file
+```
+docker-compose up
+```
 ## Installing the client
 Just run the below command to download the binary and then add it to your path
 ```
