@@ -35,7 +35,9 @@ The server loads a config when it starts which stores all of your apps and authe
       "name": "App 3",
       "description": "This is an app (3)",
       "url": "https://fdsfsdfsdfs.com/3",
-      "checkStatus": true
+      "checkStatus": true,
+      "_comment": "This is optional:",
+      "acceptableStatusCode": [200,201]
     }
   ]
 }
@@ -68,4 +70,4 @@ If you want to contribute to this project feel free to!
 - [ ] In-client configuration
 - [ ] Localization
 - [ ] Custom status code resolution with custom code
-- [ ] Custom acceptable status codes returned from URL endpoint
+- [x] Custom acceptable status codes returned from URL endpoint
