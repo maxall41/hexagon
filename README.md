@@ -1,5 +1,8 @@
 # Hexagon
 ![Logo](https://i.ibb.co/MMVFhfq/logo.png)
+---
+![Badge](https://img.shields.io/github/release-date/maxall41/hexagon)
+![BadgeStars](https://img.shields.io/github/stars/maxall41/hexagon?style=social)
 ## What is Hexagon?
 Hexagon is a terminal based Homelab dashboard so you can monitor all the apps you run locally and remember them 😉.
 ## Features
@@ -35,7 +38,9 @@ The server loads a config when it starts which stores all of your apps and authe
       "name": "App 3",
       "description": "This is an app (3)",
       "url": "https://fdsfsdfsdfs.com/3",
-      "checkStatus": true
+      "checkStatus": true,
+      "_comment": "This is optional defaults to 200 as accepted code:",
+      "acceptableStatusCode": [200,201]
     }
   ]
 }
@@ -58,14 +63,14 @@ go build .
 ## Contributing
 If you want to contribute to this project feel free to!
 ## Roadmap:
-- [ ] Docker file
+- [x] Docker file
 - [ ] Helm config
 - [ ] Docker-Compose config
 - [ ] Automated Install of both server & client
-- [ ] Icons
 - [ ] Keycloak authentication
 - [ ] Alternate views
 - [ ] In-client configuration
 - [ ] Localization
 - [ ] Custom status code resolution with custom code
-- [ ] Custom acceptable status codes returned from URL endpoint
+- [x] Custom acceptable status codes returned from URL endpoint
+- [ ] Homebrew formula
