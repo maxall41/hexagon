@@ -59,7 +59,7 @@ docker-compose up
 ## Installing the client
 Just run the below command to download the binary and then add it to your path
 ```
-wget https://github.com/maxall41/hexagon/releases/download/PUBLIC/client
+wget https://github.com/maxall41/hexagon/releases/latest/download/client
 ```
 Or run this command in the source directory to build it yourself
 ```
