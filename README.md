@@ -66,7 +66,7 @@ Or run this command in the source directory to build it yourself
 go build .
 ```
 ## Contributing
-If you want to contribute to this project feel free to!
+If you want to contribute to this project I'm happy to review your PRs!
 ## Roadmap:
 - [x] Docker file
 - [x] Docker-Compose config
