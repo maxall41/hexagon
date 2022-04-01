@@ -12,7 +12,6 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/golang-jwt/jwt"
 )
 
 
@@ -38,10 +37,6 @@ type Authenticate struct {
 type Config struct {
     Authentication   Authentication `json:"authentication"`;
     Apps   []App `json:"apps"`
-}
-
-type Claims struct {
-	jwt.StandardClaims
 }
 
 
@@ -70,7 +65,7 @@ func check_password(hash string) bool {
     correct := strings.EqualFold(strings.TrimRight(hash, "\n"),config.Authentication.Password)
     return correct
 }
-//TODO: THis is plane code. There is defiantly a better way todo this
+
 func intArrayContains(arr []int,element int) bool {
     result := false
     for _, arrElement := range arr {
