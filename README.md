@@ -63,7 +63,7 @@ go build .
 ## Contributing
 If you want to contribute to this project feel free to!
 ## Roadmap:
-- [ ] Docker file
+- [x] Docker file
 - [ ] Helm config
 - [ ] Docker-Compose config
 - [ ] Automated Install of both server & client
