@@ -71,6 +71,7 @@ If you want to contribute to this project feel free to!
 - [x] Docker file
 - [x] Docker-Compose config
 - [x] Custom acceptable status codes returned from URL endpoint
+- [ ] Homebrew formula
 - [ ] Helm config
 - [ ] Automated install for client
 - [ ] Keycloak authentication
