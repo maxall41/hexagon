@@ -66,7 +66,6 @@ If you want to contribute to this project feel free to!
 - [ ] Helm config
 - [ ] Docker-Compose config
 - [ ] Automated Install of both server & client
-- [ ] Icons
 - [ ] Keycloak authentication
 - [ ] Alternate views
 - [ ] In-client configuration
