@@ -76,7 +76,7 @@ If you want to contribute to this project I'm happy to review your PRs!
 - [ ] Helm config
 - [ ] Automated install for client
 - [ ] Keycloak authentication
-- [ ] Alternate views
+- [ ] Widgets
 - [ ] In-client configuration
 - [ ] Localization
 - [ ] Custom status code resolvers
