@@ -75,7 +75,6 @@ If you want to contribute to this project I'm happy to review your PRs!
 - [ ] Homebrew formula
 - [ ] Helm config
 - [ ] Automated install for client
-- [ ] Keycloak authentication
 - [ ] Widgets
 - [ ] In-client configuration
 - [ ] Localization
