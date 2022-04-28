@@ -20,6 +20,7 @@ The server loads a config when it starts which stores all of your apps and authe
 {
   "authentication": {
     "enabled": false,
+    "_comment": "You can generate this hash using online tools like this passwordsgenerator.net/sha256-hash-generator/"
     "sha256_password_hash": "AEC8084845B41A6952D46CBAA1C9B798659487FFD133796D95D05BA45D9096C2"
   },
   "apps": [
@@ -36,11 +37,14 @@ The server loads a config when it starts which stores all of your apps and authe
       "checkStatus": true
     },
     {
+      "_comment1": "The name of the app",
       "name": "App 3",
       "description": "This is an app (3)",
+      "_comment2": "The url of the app to open",
       "url": "https://fdsfsdfsdfs.com/3",
+      "_comment3": "Should the status of this app be checked using the above url",
       "checkStatus": true,
-      "_comment": "This is optional defaults to 200 as accepted code:",
+      "_comment4": "This is optional defaults to 200 as accepted code:",
       "acceptableStatusCode": [200,201]
     }
   ]
