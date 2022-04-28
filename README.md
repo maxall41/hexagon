@@ -15,7 +15,7 @@ Using a terminal application instead of a browser makes viewing your dashboard a
 ## Usage
 After you setup the server just put the server info into the client (You will be prompted) when it first starts. Once you get into the main screen of the client you should be able to see all of your apps. Press enter to goto it if you configured a URL. Emojis indicate status checking if you have it enabled.
 ## Configuring
-The server loads a config when it starts which stores all of your apps and authentication details. It is pretty simple here is an example config:
+The server loads a config when it starts which stores all of your apps and authentication details. It is pretty simple here is an example config it should be stored in the root directory in which you are running it as `config.json`:
 ```
 {
   "authentication": {
