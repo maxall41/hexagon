@@ -57,6 +57,7 @@ To run the server inside Docker compose just download the repo and then run the 
 docker-compose up
 ```
 Or use the built docker image https://hub.docker.com/r/maxall4/hexagon
+NOTE: Make sure to use the correct image for your CPU architecture you can find that by running `lscpu` if you are on linux.
 ## Installing the client
 Just run the below command to download the binary and then add it to your path
 ```
